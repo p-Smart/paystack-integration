@@ -101,8 +101,9 @@ const Home = () => {
           }}
           >
           {
-          form.map( (props) => (
+          form.map( (props, k) => (
             <TextField 
+            key={k}
             label={props.title}
             value={props.value}
             onChange={(e) => props.onChange(e.target.value)}
